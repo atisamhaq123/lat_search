@@ -20,11 +20,11 @@ if (!file_exists($formfile)) {
 require_once($formfile);
 
 // Dummy data (no groupid)
-$groupdata = [];
+$searchdata = [];
 
 // Instantiate the class dynamically
 $formclass = "\\local_lat_search\\form\\$tab";
-$forminstance = new $formclass($groupdata);
+$forminstance = new $formclass($searchdata);
 
 // Render via Moodle renderer (or fallback)
 if ($PAGE->get_renderer('local_lat_search')) {
@@ -32,7 +32,7 @@ if ($PAGE->get_renderer('local_lat_search')) {
     echo $renderer->render_form($forminstance, $tab);
 } else {
     // Minimal fallback: just display HTML for testing
-    echo "<div id='group-profile-form-container'>";
+    echo "<div id='search-profile-form-container'>";
     echo "<p>Loaded form: $tab</p>";
     echo "</div>";
 }

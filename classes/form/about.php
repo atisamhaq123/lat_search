@@ -12,7 +12,7 @@ class about extends moodleform
     {
         $mform = $this->_form;
         $mform->addElement('html', '<div class="form_section">');
-        $mform->addElement('html', '<h3 class="heading mb-24">' . 'Group About' . '</h3>');
+        $mform->addElement('html', '<h3 class="heading mb-24">' . 'About' . '</h3>');
       
 
         $this->add_action_buttons(false, get_string('save'));
