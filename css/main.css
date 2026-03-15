@@ -43,6 +43,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.editmode-switch-form {
+    display: none !important;
+}
+
 /* custom margins */
 
 .mt-24 {
@@ -93,15 +97,19 @@ body {
 .font-400 {
     font-weight: 400 !important;
 }
+
 .font-500 {
     font-weight: 500 !important;
 }
+
 .font-600 {
     font-weight: 600 !important;
 }
+
 .font-700 {
     font-weight: 700 !important;
 }
+
 /* font weights */
 
 .gray_box {
@@ -111,6 +119,9 @@ body {
 }
 
 /* tabs */
+.tabs_container {
+    margin-bottom: 70px;
+}
 .tabs_container .nav-tabs {
     background: var(--gray-light);
     border-radius: 8px;
@@ -189,9 +200,9 @@ body {
     width: 80px;
     min-width: 80px;
     position: relative;
-    background-image: url("../img/teacher_avatar.svg");
     background-size: cover;
     background-position: center;
+    border-radius: 4px;
 }
 
 .tutor_tag {
@@ -245,3 +256,48 @@ body {
 .teacher_status.meeting {
     background: rgb(230, 16, 16);
 }
+
+/* footer navigation */
+.footer_navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0px -9px 21.56px 0px #00000008, 0px -86px 52.5px 0px #00000005, 0px -156px 62.81px 0px #00000000, 0px -200px 68.44px 0px #00000000;
+
+    border: 0.94px solid #0000001F;
+    z-index: 999;
+}
+
+.bf-item {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.bf-title {
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--dark);
+}
+
+.bf-title.active {
+    color: red !important;
+}
+
+.bf-item .bf-title:not(.active),
+.bf-item .bf-icon img:not(.active) {
+    opacity: 0.8;
+}
+
+
+/* footer navigation */
