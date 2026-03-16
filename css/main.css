@@ -7,7 +7,7 @@
     --dark: #000000;
     --muted: #dcdcdc;
     --muted-light: #4D4C5C;
-    --accent: #ff3b1f;
+    --accent: #ff2500;
     --bg: #fff;
     --border: #DCDCE5;
     --dark-border: #0000001F;
@@ -120,7 +120,7 @@ body {
 
 /* tabs */
 .tabs_container {
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 }
 .tabs_container .nav-tabs {
     background: var(--gray-light);
@@ -237,7 +237,7 @@ body {
 
 .teacher_status {
     border-radius: 2px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--bg);
     height: 12px;
     width: 12px;
     position: absolute;
@@ -254,7 +254,7 @@ body {
 }
 
 .teacher_status.meeting {
-    background: rgb(230, 16, 16);
+    background: var(--accent)
 }
 
 /* footer navigation */
@@ -268,7 +268,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: var(--bg);
     box-shadow: 0px -9px 21.56px 0px #00000008, 0px -86px 52.5px 0px #00000005, 0px -156px 62.81px 0px #00000000, 0px -200px 68.44px 0px #00000000;
 
     border: 0.94px solid #0000001F;
@@ -291,7 +291,7 @@ body {
 }
 
 .bf-title.active {
-    color: red !important;
+    color:var(--accent) !important;
 }
 
 .bf-item .bf-title:not(.active),
@@ -299,5 +299,42 @@ body {
     opacity: 0.8;
 }
 
+
+/* pagination */
+.pagination a.first {
+    margin-right: 10px;
+}
+.pagination .disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.pagination a, .pagination span {
+     width: 32px;
+    height: 32px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    color: var(--dark);
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+}
+.pagination .active {
+    background: var(--accent);
+    color: var(--bg);
+    cursor: default;
+}
+.pagination a:not(a.first):not(a.last) {
+    border: 1px solid var(--border);
+}
+.pagination a.last {
+    margin-left: 10px;
+}
+/* pagination */
 
 /* footer navigation */
