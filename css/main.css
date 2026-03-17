@@ -219,6 +219,35 @@ body {
     border-radius: 4px;
 }
 
+.switch_btn_box {
+    position: absolute;
+    top: 87px;
+    left: 7px;
+}
+
+.switch_tutor_btn {
+    height: 32px;
+    width: 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    color: var(--dark);
+    opacity: 0.7;
+    background: var(--bg);
+}
+
+.switch_tutor_btn:hover {
+    background: var(--gray);
+}
+
+.switch_tutor_btn.active {
+    border: 1px solid var(--dark);
+    font-weight: 700;
+    opacity: 1;
+    text-decoration: underline;
+}
+
 .tutor_tag {
     border-radius: 4px;
     padding: 3px 8px;
