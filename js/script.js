@@ -270,7 +270,13 @@
         // 🔹 Handle group_tutor (same index logic)
         parentBox.find(".group_tutor").removeClass("active");
         parentBox.find(".group_tutor").eq(index).addClass("active");
+        // 🔹 Change avatar image
+        let img = $(this).data("image"); // gets axley.jpg etc
 
+        parentBox.find(".avatar_box").css(
+            "background-image",
+            "url('./img/" + img + "')"
+        );
     });
 
 })();
