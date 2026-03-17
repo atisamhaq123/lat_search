@@ -279,13 +279,21 @@ body {
     right: 14px;
 }
 
-.three_level_box {
+.hide_lines {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     /* number of lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+.hide_lines.three_level_box {
+    -webkit-line-clamp: 3;
+}
+
+.hide_lines.two_level_box {
+    -webkit-line-clamp: 2;
+}
+
 
 .teacher_status {
     border-radius: 2px;
