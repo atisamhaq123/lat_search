@@ -248,6 +248,15 @@ body {
     text-decoration: underline;
 }
 
+.group_tutor.active {
+    opacity: 1;
+}
+
+.group_tutor {
+    opacity: 0.7;
+}
+
+
 .tutor_tag {
     border-radius: 4px;
     padding: 3px 8px;

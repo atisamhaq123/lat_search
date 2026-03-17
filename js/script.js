@@ -243,6 +243,7 @@
 
     });
 
+    // change number of groups/tutors text
     $("#find_tutors_open, #find_groups_open").on("click", function () {
 
            if ($(this).attr("id") === "find_tutors_open") {
@@ -250,6 +251,25 @@
            } else {
                $("#tab_title").text("540 Groups");
            }
+
+    });
+
+    // switch tutors 1,2
+    $(".switch_tutor_btn").on("click", function () {
+
+        // Get parent content_box
+        let parentBox = $(this).closest(".content_box");
+
+        // Get index of clicked button (0 or 1)
+        let index = $(this).index();
+
+        // 🔹 Handle switch buttons (only داخل same box)
+        parentBox.find(".switch_tutor_btn").removeClass("active");
+        $(this).addClass("active");
+
+        // 🔹 Handle group_tutor (same index logic)
+        parentBox.find(".group_tutor").removeClass("active");
+        parentBox.find(".group_tutor").eq(index).addClass("active");
 
     });
 
