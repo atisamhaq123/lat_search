@@ -96,7 +96,7 @@
             $.each(tutors, function (i, t) {
 
                 html += `
-                    <div class="tutor_box">
+                    <div class="content_box">
 
                     <div class="d-flex">
 
@@ -240,6 +240,16 @@
             const page = +$(this).data("p");
             if (page) setPage(page);
         });
+
+    });
+
+    $("#find_tutors_open, #find_groups_open").on("click", function () {
+
+           if ($(this).attr("id") === "find_tutors_open") {
+               $("#tab_title").text("540 Tutors");
+           } else {
+               $("#tab_title").text("540 Groups");
+           }
 
     });
 
