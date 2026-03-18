@@ -204,7 +204,7 @@
                 avatar2: "tutor2.svg"
             },
             {
-                title: "English Group Classes (Bilingual)",
+                title: "Spanish Group Classes (Bilingual)",
                 price: "$32",
                 lesson: "50-min lesson",
                 rating: "5.0",
