@@ -405,3 +405,21 @@ body {
 /* pagination */
 
 /* footer navigation */
+
+/* sort filters */
+.sort_filters {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transform: translateY(100%); /* start off-screen */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* visible state */
+.sort_filters.show {
+    transform: translateY(0);
+}
+/* sort filters */
