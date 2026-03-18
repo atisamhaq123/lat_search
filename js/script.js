@@ -24,78 +24,82 @@
 (function () {
     'use strict';
 
-    document.addEventListener('DOMContentLoaded', function () {
-        $(document).ready(function () {
+    $(document).ready(function () {
 
-            let tutors = [
+        initTutorsData();
+        initGroupsData();
+    });
 
-                {
-                    name: "Daniela",
-                    avatar: "./img/tutor1.svg",
-                    flag: "./img/flag1.svg",
-                    badge: "./img/badge.svg",
-                    description: "Hi! I’m Daniela, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
-                    price: 8,
-                    rating: 4.7,
-                    reviews: 17,
-                    students: 30,
-                    lessons: 1260,
-                    language: "English (Native)",
-                    status: "online"
-                },
+    function initTutorsData() {
+        let tutors = [
 
-                {
-                    name: "Robertson",
-                    avatar: "./img/tutor2.svg",
-                    flag: "./img/flag2.svg",
-                    badge: "./img/badge.svg",
-                    description: "Hi! I’m Robertson, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
-                    price: 9,
-                    rating: 4.8,
-                    reviews: 22,
-                    students: 40,
-                    lessons: 1500,
-                    language: "English, Spanish",
-                    status: "away"
-                },
+            {
+                name: "Daniela",
+                avatar: "./img/tutor1.svg",
+                flag: "./img/flag1.svg",
+                badge: "./img/badge.svg",
+                description: "Hi! I’m Daniela, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
+                price: 8,
+                rating: 4.7,
+                reviews: 17,
+                students: 30,
+                lessons: 1260,
+                language: "English (Native)",
+                status: "online"
+            },
 
-                {
-                    name: "Eleanor",
-                    avatar: "./img/tutor3.svg",
-                    flag: "./img/flag3.svg",
-                    badge: "./img/badge.svg",
-                    description: "Hi! I’m Eleanor, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
-                    price: 7,
-                    rating: 4.6,
-                    reviews: 12,
-                    students: 25,
-                    lessons: 900,
-                    language: "English (Native)",
-                    status: "meeting"
-                },
+            {
+                name: "Robertson",
+                avatar: "./img/tutor2.svg",
+                flag: "./img/flag2.svg",
+                badge: "./img/badge.svg",
+                description: "Hi! I’m Robertson, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
+                price: 9,
+                rating: 4.8,
+                reviews: 22,
+                students: 40,
+                lessons: 1500,
+                language: "English, Spanish",
+                status: "away"
+            },
 
-                {
-                    name: "Alexander",
-                    avatar: "./img/tutor4.svg",
-                    flag: "./img/flag3.svg",
-                    badge: "./img/badge.svg",
-                    description: "Hi! I’m Alexander, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
-                    price: 7,
-                    rating: 4.6,
-                    reviews: 12,
-                    students: 25,
-                    lessons: 900,
-                    language: "English (Native)",
-                    status: "online"
-                }
+            {
+                name: "Eleanor",
+                avatar: "./img/tutor3.svg",
+                flag: "./img/flag3.svg",
+                badge: "./img/badge.svg",
+                description: "Hi! I’m Eleanor, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
+                price: 7,
+                rating: 4.6,
+                reviews: 12,
+                students: 25,
+                lessons: 900,
+                language: "English (Native)",
+                status: "meeting"
+            },
 
-            ];
+            {
+                name: "Alexander",
+                avatar: "./img/tutor4.svg",
+                flag: "./img/flag3.svg",
+                badge: "./img/badge.svg",
+                description: "Hi! I’m Alexander, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
+                price: 7,
+                rating: 4.6,
+                reviews: 12,
+                students: 25,
+                lessons: 900,
+                language: "English (Native)",
+                status: "online"
+            }
 
-            let html = "";
+        ];
 
-            $.each(tutors, function (i, t) {
+        let html = "";
 
-                html += `
+        $.each(tutors, function (i, t) {
+
+            html += `
                     <div class="content_box">
 
                     <div class="d-flex">
@@ -177,160 +181,154 @@
                     </div>
                     `;
 
-            });
-
-            $("#find_tutors").html(html);
-
         });
 
-        $(document).ready(function () {
+        $("#find_tutors").html(html);
+    }
+    function initGroupsData() {
+        const groupsData = [
+            {
+                title: "English Group Classes (Bilingual)",
+                price: "$16",
+                lesson: "50-min lesson",
+                rating: "5.0",
+                reviews: "17 reviews",
+                mainTeacher: "Daniela Canelon",
+                practiceTeacher: "Axley Perez",
+                language: "English (Native)",
+                activeStudents: "4 Active",
+                maxStudents: "Max 10",
+                schedule: "Mon, Wed - 8 PM EST <br> Fri - 8 PM EST",
+                description: "Certified tutor and polyglot with 5 year, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
+                avatar1: "tutor1.svg",
+                avatar2: "tutor2.svg"
+            },
+            {
+                title: "English Group Classes (Bilingual)",
+                price: "$32",
+                lesson: "50-min lesson",
+                rating: "5.0",
+                reviews: "17 reviews",
+                mainTeacher: "Cooper, Kristin",
+                practiceTeacher: "Black, Marvin",
+                language: "English (Native)",
+                activeStudents: "4 Active",
+                maxStudents: "Max 10",
+                schedule: "Mon, Wed - 8 PM EST <br> Fri - 8 PM EST",
+                description: "Certified tutor and polyglot with 5 year, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
+                avatar1: "tutor3.svg",
+                avatar2: "tutor4.svg"
+            },
+            {
+                title: "English Group Classes (Bilingual)",
+                price: "$32",
+                lesson: "60-min lesson",
+                rating: "5.0",
+                reviews: "17 reviews",
+                mainTeacher: "Axley Rosh",
+                practiceTeacher: "Georgina Floyd",
+                language: "English (Native)",
+                activeStudents: "1 Active",
+                maxStudents: "Max 10",
+                schedule: "Mon, Wed - 8 PM EST <br> Fri - 8 PM EST",
+                description: "Certified tutor and polyglot with 5 year, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
+                avatar1: "tutor1.svg",
+                avatar2: "tutor2.svg"
+            }
+        ];
 
-            const groupsData = [
-                {
-                    title: "English Group Classes (Bilingual)",
-                    price: "$16",
-                    lesson: "50-min lesson",
-                    rating: "5.0",
-                    reviews: "17 reviews",
-                    mainTeacher: "Daniela Canelon",
-                    practiceTeacher: "Axley Perez",
-                    language: "English (Native)",
-                    activeStudents: "4 Active",
-                    maxStudents: "Max 10",
-                    schedule: "Mon, Wed - 8 PM EST <br> Fri - 8 PM EST",
-                    description: "Certified tutor and polyglot with 5 year, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
-                    avatar1: "tutor1.svg",
-                    avatar2: "tutor2.svg"
-                },
-                {
-                    title: "English Group Classes (Bilingual)",
-                    price: "$32",
-                    lesson: "50-min lesson",
-                    rating: "5.0",
-                    reviews: "17 reviews",
-                    mainTeacher: "Cooper, Kristin",
-                    practiceTeacher: "Black, Marvin",
-                    language: "English (Native)",
-                    activeStudents: "4 Active",
-                    maxStudents: "Max 10",
-                    schedule: "Mon, Wed - 8 PM EST <br> Fri - 8 PM EST",
-                    description: "Certified tutor and polyglot with 5 year, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
-                    avatar1: "tutor3.svg",
-                    avatar2: "tutor4.svg"
-                },
-                {
-                    title: "English Group Classes (Bilingual)",
-                    price: "$32",
-                    lesson: "60-min lesson",
-                    rating: "5.0",
-                    reviews: "17 reviews",
-                    mainTeacher: "Axley Rosh",
-                    practiceTeacher: "Georgina Floyd",
-                    language: "English (Native)",
-                    activeStudents: "1 Active",
-                    maxStudents: "Max 10",
-                    schedule: "Mon, Wed - 8 PM EST <br> Fri - 8 PM EST",
-                    description: "Certified tutor and polyglot with 5 year, an experienced English teacher with over a decade of helping students master the language. I’m passionate about creating engaging, personalized lessons that align with each student’s unique goals and learning style. My mission is to make language learning enjoyable and effective, empowering you to achieve fluency and confidence in English. I’m excited to guide you on your journey to success!",
-                    avatar1: "tutor1.svg",
-                    avatar2: "tutor2.svg"
-                }
-            ];
+        let groupcard = "";
+        $.each(groupsData, function (index, group) {
+            groupcard += `
+                        <div class="content_box">
+                        <div class="d-flex">
 
-            let groupcard = "";
-            $.each(groupsData, function (index, group) {
-                groupcard += `
-                    <div class="content_box">
-                    <div class="d-flex">
+                            <div class="avatar_box" style="background-image: url('./img/${group.avatar1}')">
+                            <div class="switch_btn_box d-flex align-items-center">
+                                <div class="switch_tutor_btn mr-1 d-flex align-items-center justify-content-center active mb-0" data-image="${group.avatar1}">1</div>
+                                <div class="switch_tutor_btn d-flex align-items-center justify-content-center mb-0" data-image="${group.avatar2}">2</div>
+                            </div>
+                            </div>
 
-                        <div class="avatar_box" style="background-image: url('./img/${group.avatar1}')">
-                        <div class="switch_btn_box d-flex align-items-center">
-                            <div class="switch_tutor_btn mr-1 d-flex align-items-center justify-content-center active mb-0" data-image="${group.avatar1}">1</div>
-                            <div class="switch_tutor_btn d-flex align-items-center justify-content-center mb-0" data-image="${group.avatar2}">2</div>
+                        <div class="ml-3 w-100">
+
+                        <div class="d-flex mt-1 mb-3">
+                            <p class="heading_level_2 my-0">${group.title}</p>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="tutor_tag tag_blue">Professional</div>
+                            <div class="ml-2 tutor_tag tag_pink">Super tutor</div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between mt-3">
+
+                            <div>
+                            <p class="heading_level_3 my-0">${group.price}</p>
+                            <p class="small_muted_text my-0">${group.lesson}</p>
+                            </div>
+
+                            <div>
+                            <p class="heading_level_3 my-0 d-flex">
+                                <!-- SVG KEPT SAME -->
+                                <svg class="mr-1" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.9776 6.91594C17.9513 6.83291 17.9012 6.75939 17.8337 6.70437C17.7662 6.64935 17.684 6.61523 17.5974 6.60619L11.7894 5.98969L9.4104 0.619688C9.2664 0.293438 8.73315 0.293438 8.58915 0.619688L6.21165 5.98969L0.402898 6.60619C0.316245 6.61546 0.234139 6.64965 0.166519 6.70463C0.0988983 6.7596 0.0486644 6.833 0.0218983 6.91594C-0.00491891 6.99917 -0.00715398 7.08838 0.0154612 7.17285C0.0380764 7.25733 0.0845815 7.33348 0.149398 7.39219L4.48815 11.3282L3.27615 17.0784C3.26239 17.1441 3.26337 17.212 3.27901 17.2772C3.29466 17.3425 3.32457 17.4035 3.36661 17.4557C3.40864 17.508 3.46175 17.5504 3.5221 17.5797C3.58246 17.609 3.64856 17.6245 3.71565 17.6252C3.79471 17.6252 3.87235 17.6043 3.94065 17.5644L9.00015 14.6274L14.0604 17.5644C14.2134 17.6537 14.4054 17.6432 14.5494 17.5382C14.6197 17.4865 14.6736 17.4156 14.7048 17.3341C14.7359 17.2526 14.7429 17.1638 14.7249 17.0784L13.5129 11.3274L17.8524 7.39144C17.9168 7.33263 17.9629 7.25652 17.9853 7.17221C18.0076 7.08789 18.0052 6.99893 17.9784 6.91594H17.9776Z" fill="#121117"></path>
+                                </svg>
+                                ${group.rating}
+                            </p>
+                            <p class="small_muted_text my-0">${group.reviews}</p>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="row mx-n2 mt-3">
+
+                        <div class="col-6 px-1">
+                        <div class="border_box">
+                            <p class="extra_small_muted_text mb-1">Main Teacher:</p>
+                            <p class="small_text mb-1 group_tutor active">${group.mainTeacher}</p>
+                            <p class="extra_small_muted_text mb-0">${group.language}</p>
                         </div>
                         </div>
 
-                    <div class="ml-3 w-100">
-
-                    <div class="d-flex mt-1 mb-3">
-                        <p class="heading_level_2 my-0">${group.title}</p>
-                    </div>
-
-                    <div class="d-flex">
-                        <div class="tutor_tag tag_blue">Professional</div>
-                        <div class="ml-2 tutor_tag tag_pink">Super tutor</div>
-                    </div>
-
-                    <div class="d-flex align-items-center justify-content-between mt-3">
-
-                        <div>
-                        <p class="heading_level_3 my-0">${group.price}</p>
-                        <p class="small_muted_text my-0">${group.lesson}</p>
+                        <div class="col-6 px-1">
+                        <div class="border_box">
+                            <p class="extra_small_muted_text mb-1">Practice Teacher:</p>
+                            <p class="small_text mb-1 group_tutor">${group.practiceTeacher}</p>
+                            <p class="extra_small_muted_text mb-0">${group.language}</p>
+                        </div>
                         </div>
 
-                        <div>
-                        <p class="heading_level_3 my-0 d-flex">
-                            <!-- SVG KEPT SAME -->
-                            <svg class="mr-1" width="18" height="18" viewBox="0 0 18 18" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.9776 6.91594C17.9513 6.83291 17.9012 6.75939 17.8337 6.70437C17.7662 6.64935 17.684 6.61523 17.5974 6.60619L11.7894 5.98969L9.4104 0.619688C9.2664 0.293438 8.73315 0.293438 8.58915 0.619688L6.21165 5.98969L0.402898 6.60619C0.316245 6.61546 0.234139 6.64965 0.166519 6.70463C0.0988983 6.7596 0.0486644 6.833 0.0218983 6.91594C-0.00491891 6.99917 -0.00715398 7.08838 0.0154612 7.17285C0.0380764 7.25733 0.0845815 7.33348 0.149398 7.39219L4.48815 11.3282L3.27615 17.0784C3.26239 17.1441 3.26337 17.212 3.27901 17.2772C3.29466 17.3425 3.32457 17.4035 3.36661 17.4557C3.40864 17.508 3.46175 17.5504 3.5221 17.5797C3.58246 17.609 3.64856 17.6245 3.71565 17.6252C3.79471 17.6252 3.87235 17.6043 3.94065 17.5644L9.00015 14.6274L14.0604 17.5644C14.2134 17.6537 14.4054 17.6432 14.5494 17.5382C14.6197 17.4865 14.6736 17.4156 14.7048 17.3341C14.7359 17.2526 14.7429 17.1638 14.7249 17.0784L13.5129 11.3274L17.8524 7.39144C17.9168 7.33263 17.9629 7.25652 17.9853 7.17221C18.0076 7.08789 18.0052 6.99893 17.9784 6.91594H17.9776Z" fill="#121117"></path>
-                            </svg>
-                            ${group.rating}
-                        </p>
-                        <p class="small_muted_text my-0">${group.reviews}</p>
+                        <div class="col-6 px-1 mt-2">
+                        <div class="border_box">
+                            <p class="extra_small_muted_text mb-1">Students</p>
+                            <p class="small_text mb-1">${group.activeStudents}</p>
+                            <p class="extra_small_muted_text mb-0">${group.maxStudents}</p>
+                        </div>
+                        </div>
+
+                        <div class="col-6 px-1 mt-2">
+                        <div class="border_box">
+                            <p class="extra_small_muted_text mb-1">Schedule:</p>
+                            <p class="small_text mb-1">${group.schedule}</p>
+                        </div>
                         </div>
 
                     </div>
+
+                    <p class="heading_level_4 mt-3 mb-0 two_level_box hide_lines">${group.description}</p>
+
                     </div>
-                </div>
+                    `;
 
-                <div class="row mx-n2 mt-3">
-
-                    <div class="col-6 px-1">
-                    <div class="border_box">
-                        <p class="extra_small_muted_text mb-1">Main Teacher:</p>
-                        <p class="small_text mb-1 group_tutor active">${group.mainTeacher}</p>
-                        <p class="extra_small_muted_text mb-0">${group.language}</p>
-                    </div>
-                    </div>
-
-                    <div class="col-6 px-1">
-                    <div class="border_box">
-                        <p class="extra_small_muted_text mb-1">Practice Teacher:</p>
-                        <p class="small_text mb-1 group_tutor">${group.practiceTeacher}</p>
-                        <p class="extra_small_muted_text mb-0">${group.language}</p>
-                    </div>
-                    </div>
-
-                    <div class="col-6 px-1 mt-2">
-                    <div class="border_box">
-                        <p class="extra_small_muted_text mb-1">Students</p>
-                        <p class="small_text mb-1">${group.activeStudents}</p>
-                        <p class="extra_small_muted_text mb-0">${group.maxStudents}</p>
-                    </div>
-                    </div>
-
-                    <div class="col-6 px-1 mt-2">
-                    <div class="border_box">
-                        <p class="extra_small_muted_text mb-1">Schedule:</p>
-                        <p class="small_text mb-1">${group.schedule}</p>
-                    </div>
-                    </div>
-
-                </div>
-
-                <p class="heading_level_4 mt-3 mb-0 two_level_box hide_lines">${group.description}</p>
-
-                </div>
-                `;
-
-                $("#find_groups").html(groupcard);
-
-            });
 
         });
+        $("#find_groups").html(groupcard);
 
-
-    });
+    }
 
 
     $(function () {
