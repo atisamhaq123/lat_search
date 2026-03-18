@@ -407,19 +407,20 @@ body {
 /* footer navigation */
 
 /* sort filters */
-.sort_filters {
+.modal-dialog.sort-dialog {
     position: fixed;
     bottom: 0;
-    left: 0;
+    margin: 0;
     width: 100%;
-    background: #fff;
-    transform: translateY(100%); /* start off-screen */
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
+    transform: translateY(100%) !important;
+    transition: transform 0.2s ease-out !important;
 }
 
-/* visible state */
-.sort_filters.show {
-    transform: translateY(0);
+.modal.fade {
+    transform: opacity 0.1s linear !important;
+}
+
+.modal.show .modal-dialog.sort-dialog {
+    transform: translateY(0) !important;
 }
 /* sort filters */
