@@ -498,6 +498,11 @@ body {
     left: 14px;
 }
 
+.modal-dialog.filterModal ul.flags li {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-bottom: 8px;
+}
 .modal-dialog.filterModal ul li{
     display: flex;
     align-items: center;
