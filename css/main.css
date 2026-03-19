@@ -55,6 +55,12 @@ body {
 
 /* headings */
 
+.heading_level_0 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
 .heading_level_1 {
     font-size: 24px;
     font-weight: 700;
@@ -416,11 +422,17 @@ body {
     transition: transform 0.2s ease-out !important;
 }
 
-.modal.fade {
-    transform: opacity 0.1s linear !important;
-}
-
 .modal.show .modal-dialog.sort-dialog {
     transform: translateY(0) !important;
 }
+.sortModal {
+    border-radius: 20px;
+}
+
+.sortModal li{
+    list-style: none;
+    padding-block: 13px;
+    border-bottom: 1px solid #0000001F;
+}
+
 /* sort filters */

@@ -426,4 +426,23 @@
 
     });
 
+    // attach checked
+    const checkIcon = `
+        <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7856 0.262748C14.0817 0.601228 14.0696 1.13682 13.7585 1.45903L4.77084 10.7667C4.61735 10.9257 4.4109 11.0096 4.19922 10.9991C3.98753 10.9886 3.78894 10.8847 3.64936 10.7112L0.192573 6.41534C-0.0903678 6.06372 -0.0577269 5.52914 0.265478 5.22133C0.588684 4.91351 1.08006 4.94902 1.363 5.30064L4.28566 8.93271L12.686 0.233283C12.9971 -0.0889236 13.4894 -0.0757317 13.7856 0.262748Z" fill="black"/>
+        </svg>
+    `;
+
+    $(".modal-body ul li").click(function () {
+
+        // Remove SVG from all
+        $(".modal-body ul li svg").remove();
+
+        // Add SVG to clicked one
+        if ($(this).hasClass("lesson")) return;
+        $(this).append(checkIcon);
+
+    });
+    // attach checked
+
 })();
