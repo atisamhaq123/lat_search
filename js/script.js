@@ -445,4 +445,28 @@
     });
     // attach checked
 
+    // filter check uncheck code
+    $(document).on("click", ".filtercheckbox", function () {
+        const $btn = $(this);
+
+        // Check if already active
+        if ($btn.hasClass("active")) {
+            // Remove tick
+            $btn.removeClass("active");
+            $btn.find("svg").remove();
+        } else {
+            // Add tick
+            $btn.addClass("active");
+
+            const tickSVG = `
+            <svg width="12" height="12" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 5.5L8.5 13L4 9" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        `;
+
+            $btn.html(tickSVG);
+        }
+    });
+    // filter check uncheck code
+
 })();
