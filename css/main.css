@@ -444,15 +444,21 @@ body {
 /* sort filters */
 
 /* All filters */
+#page-wrapper {
+    overflow: hidden;
+}
+
 .modal-dialog.filterModal {
     position: fixed;
     left: 0;
     top: 0;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: auto;
     width: 100%;
     margin-top: 0;
     background: var(--bg);
 }
+
 
 .modal-dialog.filterModal .back {
     height: 40px;
@@ -476,7 +482,10 @@ body {
         0px 156.56px 62.81px 0px #00000000,
         0px 244.69px 68.44px 0px #00000000;
     border-bottom: 1px solid #0000001F;
-
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
 }
 
 .modal-dialog.filterModal .slider_box {
@@ -503,6 +512,11 @@ body {
     border: 1px solid var(--border);
     margin-bottom: 8px;
 }
+
+.modal-dialog.filterModal ul.nopad li{
+    padding-inline: 0;
+}
+
 .modal-dialog.filterModal ul li{
     display: flex;
     align-items: center;
