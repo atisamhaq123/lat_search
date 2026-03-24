@@ -470,6 +470,20 @@
     });
     // filter check uncheck code
 
+    // page-wrapper
+
+    // When filter is opened
+    $('.filter').on('click', function () {
+        $('#page-wrapper').css('overflow', 'hidden');
+    });
+
+    // When filter is closed
+    $('.close-main-filters').on('click', function () {
+        $('#page-wrapper').css('overflow', '');
+        // or use 'auto' if you prefer:
+        // $('#page-wrapper').css('overflow', 'auto');
+    });
+    // page-wrapper
     //  slider logic
     /* ====== STATE ====== */
     const find_groups_details_state = {
