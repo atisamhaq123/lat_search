@@ -520,7 +520,7 @@
 
         const maxLabel = max === cfgMax ? `${max}+` : max;
 
-        $priceRead.text(`$${min} – $${maxLabel}`);
+        $priceRead.text(`US$${min} – US$${maxLabel}`);
     }
 
     /* ====== DRAG HANDLER ====== */
