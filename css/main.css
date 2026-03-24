@@ -576,5 +576,11 @@ body {
     cursor: grab;
     touch-action: none;
 }
+
+.range-label {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary)
+}
 /* range part of filter */
 /* All filters */
