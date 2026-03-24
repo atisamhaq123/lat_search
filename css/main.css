@@ -581,3 +581,9 @@ body {
 }
 /* range part of filter */
 /* All filters */
+
+@media (min-width: 320px) {
+    .modal-dialog {
+        max-width: none !important;
+    }
+}
