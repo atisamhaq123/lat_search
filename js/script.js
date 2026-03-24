@@ -433,7 +433,7 @@
         </svg>
     `;
 
-    $(".modal-body ul li").click(function () {
+    $(".sortModal .modal-body ul li").click(function () {
 
         // Remove SVG from all
         $(".modal-body ul li svg").remove();

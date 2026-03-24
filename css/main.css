@@ -582,6 +582,23 @@ body {
 /* range part of filter */
 /* All filters */
 
+/* what would u like to learn */
+.learnModal-content ul li {
+    padding: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--primary);
+    border: 2px solid #0000001F;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* what would u like to learn */
+
 @media (min-width: 320px) {
     .modal-dialog {
         max-width: none !important;
