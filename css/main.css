@@ -563,8 +563,8 @@ body {
 .range_thumb {
     position: absolute;
     top: 50%;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border-radius: 8px;
     background: #fff;
     border: 2px solid var(--dark);
