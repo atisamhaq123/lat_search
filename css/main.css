@@ -457,6 +457,7 @@ body {
 }
 
 
+.modal-dialog.favModal .back ,
 .modal-dialog.filterModal .back {
     height: 40px;
     width: 40px;
@@ -604,3 +605,14 @@ body {
         max-width: none !important;
     }
 }
+
+#page-wrapper {
+    overflow: hidden !important;
+}
+
+/* favorites screen */
+.modal-dialog.favModal .favModal-header {
+    border-bottom: 1px solid #0000001F;
+    background: var(--bg);
+}
+/* favorites screen */
