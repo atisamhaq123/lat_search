@@ -606,9 +606,9 @@ body {
     }
 }
 
-#page-wrapper {
+/* #page-wrapper {
     overflow: hidden !important;
-}
+} */
 
 /* favorites screen */
 .modal-dialog.favModal .favModal-header {
